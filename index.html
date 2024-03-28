@@ -102,7 +102,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		var a_canvas = document.getElementById("a"); //refers canvas we are targeting the image on 
 		var a_context = a_canvas.getContext ("2d"); // provides 2d dimension for image on canvas 
 		var cat = new Image(); // defines cat as the image variable
-		cat.src = "images/cat.png"; // the image
+		cat.src = "silly cat .jpeg"; // the image
 		cat.onload = function () { // makes the function activate when page loads
 		a_context.drawImage (cat, 10, 20); // image and image location on canvas
 	}; // closes onload function
@@ -111,12 +111,11 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	</script>
 
 	<p style="color:black;"id="car"></p> <!--the format of the button-->
-	<a onclick="clearcanvas_a ()" class="w3-btn w3-black">Clear </a> <!--button that will clear on the canvas-->
+	<a onclick="clearcanvas_a()" class="w3-btn w3-black">Clear </a> <!--button that will clear on the canvas-->
 	<script> 
 	function clearcanvas_a() {
-   	var a_canvas = document.getElementById("a"),
-        var a_context = a_canvas.getContext("2d");
-    	a_context.clearRect(0, 0, 300, 225);
+   	var a_canvas = document.getElementById("a");
+        a_canvas.width = a_canvas.width;//rests width of canvas, clears the canvas 
 } //closes function to clear canvas 
 	</script>
 
