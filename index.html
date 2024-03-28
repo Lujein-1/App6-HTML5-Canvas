@@ -96,7 +96,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	</script>
 
 	<p style="color:black;"id="image"></p> <!--the format of the button-->
-	<a onclick="draw_Image ()" class="w3-btn w3-black">Image</a> <!--button that will put image on the canvas-->
+	<a onclick="draw_image ()" class="w3-btn w3-black">Image</a> <!--button that will put image on the canvas-->
 	<script> 
 		function draw_image() { // function to add image onto canvas
 		var a_canvas = document.getElementById("a"); //refers canvas we are targeting the image on 
@@ -104,7 +104,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		var cat = new Image(); // defines cat as the image variable
 		cat.src = "silly cat .jpeg"; // the image
 		cat.onload = function () { // makes the function activate when page loads
-		a_context.drawImage (cat, 10, 20); // image and image location on canvas
+		a_context.drawImage (cat, 0, 0); // image and image location on canvas
 	}; // closes onload function
 } // closes function to add image onto canvas
 
