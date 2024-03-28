@@ -77,35 +77,49 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<a onclick="draw_a ()" class="w3-btn w3-black">Draw</a> <!--button that will draw on the canvas-->
 	<script>
 	var a_canvas = document.getElementById("a"); //refers to canvas, helps with finding or calling back this canvas faster 
-		function draw_a() {
+		function draw_a() { //function that will draw on canvas 
   		var a_canvas = document.getElementById("a"); //refers or calls back to canvas we want to draw on 
 		var a_context = a_canvas.getContext("2d"); //identifies the 2d shape that we will draw on the canvas 
   		a_context.fillRect(50, 25, 150, 100); //characteristics and location of the 2d shape that we will draw on the canvas 
-} //onclick function to draw on canvas when pressed on 
+} //closes onclick function to draw on canvas when pressed on 
 	</script>
 
 	<p style="color:black;"id="text"></p> <!--the format of the button-->
 	<a onclick="fillText_a ()" class="w3-btn w3-black">Write Name</a> <!--button that will write name on the canvas-->
 	<script>
 	var a_canvas = document.getElementById("a"); //refers to canvas, helps with finding or calling back this canvas faster 
-		function fillText_a() {
+		function fillText_a() { //function that will add text to canvas
   		var a_canvas = document.getElementById("a"); //refers or calls back to canvas we want to draw on 
 		var a_context = a_canvas.getContext("2d"); //identifies the 2d dimension that we will write on the canvas 
  		a_context.fillText("Lujein", 220, 50); //the name and the location on the canvas that name will appear at 
-} //onclick function to write name on canvas when pressed on 
+} // closes onclick function to write name on canvas when pressed on 
 	</script>
 
 	<p style="color:black;"id="image"></p> <!--the format of the button-->
-	<a onclick="drawImage_a ()" class="w3-btn w3-black">Image</a> <!--button that will put image on the canvas-->
-	<img id="flowers" src=""https://www.verywellhealth.com/thmb/Kidm91prtuzazGf1ShjQPjHNxfI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1266494470-56273107e06842bdacc9074754645663.jpg" 	alt="Doctors treating patient with mask"> <!--This is the code for the image to be displayed on the screen-->
-	<script>
-		window.onload = function drawImage_a () {
-  		var a_canvas = document.getElementById("a");
-  		var a_context = canvas.getContext("2d");
-  		var flowers = document.getElementById("flowers");
-  		a_context.drawImage(flowers, 100, 50);
-};
-</script>
+	<a onclick="draw_Image ()" class="w3-btn w3-black">Image</a> <!--button that will put image on the canvas-->
+	<script> 
+		function draw_image() { // function to add image onto canvas
+		var a_canvas = document.getElementById("a"); //refers canvas we are targeting the image on 
+		var a_context = a_canvas.getContext ("2d"); // provides 2d dimension for image on canvas 
+		var cat = new Image(); // defines cat as the image variable
+		cat.src = "images/cat.png"; // the image
+		cat.onload = function () { // makes the function activate when page loads
+		a_context.drawImage (cat, 10, 20); // image and image location on canvas
+	}; // closes onload function
+} // closes function to add image onto canvas
+
+	</script>
+
+	<p style="color:black;"id="car"></p> <!--the format of the button-->
+	<a onclick="clearcanvas_a ()" class="w3-btn w3-black">Clear </a> <!--button that will clear on the canvas-->
+	<script> 
+	function clearcanvas_a() {
+   	var a_canvas = document.getElementById("a"),
+        var a_context = a_canvas.getContext("2d");
+    	a_context.clearRect(0, 0, 300, 225);
+} //closes function to clear canvas 
+	</script>
+
 
 	
 	</p>	
